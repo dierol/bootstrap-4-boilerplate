@@ -4,13 +4,70 @@ $theme-colors: (
 );
 
 @import "node_modules/bootstrap/scss/bootstrap";
+@use 'new-module';
+
+$font-stack:    Helvetica, sans-serif;
+$secondary-color: pink;
+$primary-color: #aaa;
+
+%parent-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.parent {
+  @extend %parent-shared;
+}
+
+.child {
+  @extend %parent-shared;
+  border: 2px solid #ccc;
+  color: #444;
+}
 
 body {
-    padding-top:56px;
+  font: 100% $font-stack;
+  color: $primary-color;
+  padding-top:56px;
 }
+
+body {
+  div.content-1 {
+    color: $secondary-color;
+  }
+
+  div.content-2 {
+    color: $primary-color;
+  }
+
+  div.content-3 {
+    color: $secondary-color;
+  }
+}
+
 .footer {
     margin-top:3rem;
 }
 .navbar {
     border-bottom:1px solid #eee;
+}
+
+.invisible {
+  visibility: hidden;
+}
+.manifest-bg-2,
+.manifest-bg-1 {
+    background: transparent center center no-repeat;
+    background-size: cover;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
