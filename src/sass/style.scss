@@ -2,15 +2,38 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 
-.blue-gradient: { background-image: linear-gradient(to right, #a91515, #f33333) };
-.yellow-gradient: { background-image: linear-gradient(to right, #f5c74c, #f5c74c) };
-.green-gradient: { background-image: linear-gradient(to right, #0db328, #3ad854) };
-.red-gradient: { background-image: linear-gradient(to right, #a91515, #ff5666) };
+$gradient-blue: linear-gradient(to right, #a91515, #f33333);
+$gradient-yellow: linear-gradient(to right, #f5c74c, #f5c74c);
+$gradient-green: linear-gradient(to right, #0db328, #3ad854);
+$gradient-red: linear-gradient(to right, #a91515, #ff5666);
 
+
+@mixin hover {
+  body {
+    @content;
+  }
+}
+
+.button {
+  border: 1px solid black;
+  @include hover {
+    border-width: 2px;
+  }
+}
+
+@mixin colored-content($from, $to) {
+  @debug "$from: #{$from}";
+  @debug "$to: #{$to}";
+  body {
+    background-image: linear-gradient(to right, $from, $to);
+  }
+  /* Any other rules which use $color here */
+}
 
 .button-primary:hover {
   background-color: yellow;
   border-color: #f5c74c;
+  @include colored-content(#f5c74c, #f5c74c);
 }
 
 .button-secondary:hover {
@@ -21,6 +44,10 @@
 .button-tertiaty:hover {
   background-color: red;
   border-color: #a91515;
+}
+
+body {
+  background-image: linear-gradient(to right, #0265e7 , #31abfe);
 }
 
 body {
