@@ -1,73 +1,65 @@
-$theme-colors: (
-    "primary": #ff3a52,
-    "dark": #000000
-);
 
 @import "node_modules/bootstrap/scss/bootstrap";
-@use 'new-module';
+@import "node_modules/animate.css/animate";
 
-$font-stack:    Helvetica, sans-serif;
-$secondary-color: pink;
-$primary-color: #aaa;
 
-%parent-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+html, body {
+  height: 100%;
+  text-align: center;
 }
 
-.parent {
-  @extend %parent-shared;
-}
-
-.child {
-  @extend %parent-shared;
-  border: 2px solid #ccc;
-  color: #444;
-}
-
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-  padding-top:56px;
-}
-
-body {
-  div.content-1 {
-    color: $secondary-color;
-  }
-
-  div.content-2 {
-    color: $primary-color;
-  }
-
-  div.content-3 {
-    color: $secondary-color;
-  }
-}
-
-.footer {
-    margin-top:3rem;
-}
-.navbar {
-    border-bottom:1px solid #eee;
+.login {
+  width: 100%;
+  height: 100vh;
 }
 
 .invisible {
   visibility: hidden;
 }
-.manifest-bg-2,
-.manifest-bg-1 {
-    background: transparent center center no-repeat;
-    background-size: cover;
+
+.login-block {
+  min-height: 100vh;
+  float: left;
+  padding: 0;
 }
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+
+.login-block {
+  .form-block {
+    h3,
+    label {
+      color: #9a9c9e;
+      padding-bottom: 10px
+    }
+
+    input.checkbox {
+      text-align: left;
+    }
+
+    button {
+      font-size: small;
+    }
+
+    ::placeholder {
+      font-size: small;
+      color: #9a9c9e;
+      opacity: 1;
+    }
+
+    div.password-recovery {
+      font-size: small;
+      padding-top: 2%
+    }
+  }
 }
-.animated {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+
+.login-image {
+  background-size: cover;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
 }
