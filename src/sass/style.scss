@@ -1,73 +1,74 @@
-$theme-colors: (
-    "primary": #ff3a52,
-    "dark": #000000
-);
-
 @import "node_modules/bootstrap/scss/bootstrap";
-@use 'new-module';
-
-$font-stack:    Helvetica, sans-serif;
-$secondary-color: pink;
-$primary-color: #aaa;
-
-%parent-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
-
-.parent {
-  @extend %parent-shared;
-}
-
-.child {
-  @extend %parent-shared;
-  border: 2px solid #ccc;
-  color: #444;
-}
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
-  padding-top:56px;
+  background-color: #0160ee
 }
 
-body {
-  div.content-1 {
-    color: $secondary-color;
-  }
-
-  div.content-2 {
-    color: $primary-color;
-  }
-
-  div.content-3 {
-    color: $secondary-color;
-  }
+.card {
+  width: 57%;
+  color: #747272ed;
+  margin-left: 21.5%;
+  margin-top: 3%;
 }
 
-.footer {
-    margin-top:3rem;
-}
-.navbar {
-    border-bottom:1px solid #eee;
+.card-header,
+.card-footer {
+  background-color: white;
 }
 
-.invisible {
-  visibility: hidden;
+.card-body input {
+  background-color: #ecf0f6;
+  border-color: #ecf0f6;
 }
-.manifest-bg-2,
-.manifest-bg-1 {
-    background: transparent center center no-repeat;
-    background-size: cover;
+
+.custom-control-label {
+  font-size: initial;
 }
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+.custom-control-label:before{
+  background-color: #ecf0f6;
+  border-color: #ecf0f6;
 }
-.animated {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+
+.card-body input:valid {
+  border: 1px, solid #28a745;
+}
+.card-body input:invalid {
+  border: 1px, solid #dc3545;
+}
+
+.text-light-grey {
+  color: #b0b5bc;
+}
+
+.fa {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+}
+
+.fa-github {
+  background: #24292e;
+}
+
+.fa-google {
+  background: #dd4b39;
 }
