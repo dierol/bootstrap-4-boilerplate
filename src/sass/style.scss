@@ -1,73 +1,161 @@
-$theme-colors: (
-    "primary": #ff3a52,
-    "dark": #000000
-);
-
 @import "node_modules/bootstrap/scss/bootstrap";
-@use 'new-module';
 
-$font-stack:    Helvetica, sans-serif;
-$secondary-color: pink;
-$primary-color: #aaa;
+$primary-color: #0061f2;
+$secondary-color: #6900c7;
+$tertiary-color: #00ba94;
 
-%parent-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+$title-grey: #3a4966;
+$text-grey: #8a93a1;
+$bg-grey: #EFF3F9;
+
+.color-grey {
+  color: $text-grey;
 }
 
-.parent {
-  @extend %parent-shared;
+.color-green {
+  color: $tertiary-color;
 }
 
-.child {
-  @extend %parent-shared;
-  border: 2px solid #ccc;
-  color: #444;
-}
-
-body {
-  font: 100% $font-stack;
+.color-blue {
   color: $primary-color;
-  padding-top:56px;
 }
 
-body {
-  div.content-1 {
-    color: $secondary-color;
-  }
-
-  div.content-2 {
-    color: $primary-color;
-  }
-
-  div.content-3 {
-    color: $secondary-color;
-  }
+.title {
+  color: $title-grey;
 }
 
-.footer {
-    margin-top:3rem;
-}
-.navbar {
-    border-bottom:1px solid #eee;
+.second-section img {
+  margin-top: -9%;
+  margin-left: -20%;
 }
 
-.invisible {
-  visibility: hidden;
+.bg-primary-to-secondary {
+    background-image: linear-gradient(to right bottom, $primary-color 0%, $secondary-color 100%);
 }
-.manifest-bg-2,
-.manifest-bg-1 {
-    background: transparent center center no-repeat;
-    background-size: cover;
+
+.bg-transparent {
+  background-color: transparent;
 }
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+
+.bg-white {
+  background-color: white;
 }
-.animated {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+
+.bg-grey {
+  background-color: #EFF3F9;
+}
+
+.bg-green {
+  background-color: $tertiary-color;
+}
+
+.badge-grey {
+  background-color: #EFF3F9;
+}
+
+.badge-blue {
+  color: #0061f2;
+  background-color: #bfd6f8;
+}
+
+.badge-dark {
+  color: #8E919A;
+  background-color: #1C283A;
+}
+
+.bg-blue {
+  color: white;
+  background-color: #17273deb;
+}
+
+.header-push-up {
+  position: relative;
+  margin-top: -4%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.fa-custom-badge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: white;
+}
+
+.fa-custom-badge i {
+  color: white;
+}
+
+.border-none {
+  border: none;
+}
+
+.text-grey-light {
+  color: #999ea5
+}
+
+.footer a {
+    color: inherit !important;
+}
+
+header p {
+  font-size: 1.15rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: $title-grey;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: $title-grey;
+}
+
+ul {
+  padding-left: 21% !important;
+}
+
+footer {
+  padding-top: 7%;
+}
+
+section {
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+.pricing .card-body {
+  min-height: 30rem;
+}
+
+.price {
+  font-size: 3rem;
+  color: #323f52;
+  margin-bottom: 1rem;
+}
+
+.price .period {
+  font-size: 1.3rem;
+}
+
+.price .currency {
+  top: -0.3em;
+}
+
+.font-big {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.border-right {
+  border-right: 0.0625rem solid $text-grey;
 }
